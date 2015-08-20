@@ -10,18 +10,19 @@
 	<div id="main-contianer">
 		<h1>Dynamic Grid Demo</h1>
 
-		<div class="controls"> 
-			<label>Grid<select id="grid-selector">
+		<div id="selector-container"> 
+			<label>Grid<select id="grid-selector"  class="selector">
 							<option value="3"> 3 Columns </option>
 							<option value="4"> 4 Columns </option>
 							<option value="5"> 5 Columns </option>
 						</select>
 			</label>
 
-			<label>Sort by<select id="sort-selector">
-							<option value="price"> Price </option>
+			<label>Sort by<select id="sort-selector" class="selector">
+							<option value="price"> Original Price </option>
 							<option value="brand"> Brand </option>
 							<option value="title"> Title </option>
+							<option value="sale_price"> Sale Price </option>
 						</select>
 			</label>
 		</div>

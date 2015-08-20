@@ -1,3 +1,33 @@
+
+* {
+  padding:0;
+  margin:0;
+}
+
+h1{
+	margin-left: 40px;
+	padding: 20px 0;
+}
+
+div#selector-container{
+	margin-left:40px;
+}
+
+label + label{
+	margin-left: 20px;
+}
+
+.selector{
+	margin-left: 10px;
+}
+
+ul#products{
+	margin:  20px 40px;
+	border: 1px ridge;
+	padding: 15px;
+}
+
+
 li.product{
 	/*float: left;*/
 	padding: 2px;
@@ -14,6 +44,6 @@ li.product img{
 }
 
 span.sale-price{
-	color:red; 
+	color: red; 
 	margin-left: 20px;
 }

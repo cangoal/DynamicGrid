@@ -76,6 +76,8 @@ var mergeDataSources = function(obj1, obj2){
 var mergedObjects = mergeDataSources(datasource1, datasource2);
 
 
+
+
 // dynamic sort method
 function dynamicSort(property){
   // default sort by price
@@ -83,6 +85,12 @@ function dynamicSort(property){
      property = "price";
   }
   return function(obj1, obj2){
+      if(obj1[property] == null){
+        return 1;
+      }
+      if(obj2[property] == null){
+        return 0;
+      }
       if(obj1[property] < obj2[property]){
         return -1;
       } 
@@ -126,6 +134,9 @@ var generateProducts = function(sortByProp){
 // call function 
 generateProducts();
 
+
+
+
 // add event listener for dynamic grid change
 var gridSelector = document.getElementById('grid-selector');
 
@@ -133,12 +144,12 @@ gridSelector.addEventListener("change", function(){
     changeGrid(gridSelector.value);
 });
 
-// change grid by selecting col
+// change grid by selecting column
 function changeGrid(col){
   var products = document.getElementsByClassName('product');
   var width = (1 / col) * 100 + '%';
   console.log(width);
-  for(i=0; i<products.length; i++) {
+  for(var i=0; i<products.length; i++) {
     products[i].style.width = width;
   }
 };
@@ -149,6 +160,7 @@ var sortSelector = document.getElementById('sort-selector');
 sortSelector.addEventListener("change", function(){
     document.getElementById('products').innerHTML = "";
     generateProducts(sortSelector.value);
+    changeGrid(gridSelector.value);
 });
 
 
