@@ -1,0 +1,19 @@
+li.product{
+	/*float: left;*/
+	padding: 2px;
+	width: 33%;
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+
+li.product img{
+	width: 60%;
+	left: 15%;
+	position: relative;
+}
+
+span.sale-price{
+	color:red; 
+	margin-left: 20px;
+}

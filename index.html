@@ -1,0 +1,40 @@
+<!doctype html>
+
+<head>
+	<meta charset="utf-8">
+	<title> Dynamic Grid Demo </title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="main-contianer">
+		<h1>Dynamic Grid Demo</h1>
+
+		<div class="controls"> 
+			<label>Grid<select id="grid-selector">
+							<option value="3"> 3 Columns </option>
+							<option value="4"> 4 Columns </option>
+							<option value="5"> 5 Columns </option>
+						</select>
+			</label>
+
+			<label>Sort by<select id="sort-selector">
+							<option value="price"> Price </option>
+							<option value="brand"> Brand </option>
+							<option value="title"> Title </option>
+						</select>
+			</label>
+		</div>
+		<ul id="products">
+			<!--
+			<li class="product">
+				<img class="image" src="http://images.neimanmarcus.com/ca/1/product_assets/X/2/V/1/Z/NMX2V1Z_mk.jpg"/>
+				<div style="clear:both">
+				<span class="brand">Burberry<br></span>
+				<span class="title">Riddlestone Check-Panel Rain Boot<br></span>
+				<span class="price">$325.00</span>
+			</li> -->
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/gridBuilder.js"></script>
+</body>
