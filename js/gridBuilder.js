@@ -113,11 +113,14 @@ var HTMLproductSalePrice = '<span class="sale-price">NOW: %salePrice%</span>';
 var generateProducts = function(sortByProp){
   // var products = mergeDataSources(datasource1, datasource2).sort(dynamicSort(sortByProp));
   var products = mergedObjects.sort(dynamicSort(sortByProp));
-  console.log(products);
   for(var product in products){
+
+    // create a new DOM elemets which represents one item
     var node = document.createElement("li");
     node.className = "product";
     document.getElementById('products').appendChild(node);
+
+    // insert data into html templates
     var productContent = "";
     productContent = HTMLproductContent.replace('%image%', products[product].img_url);
     productContent = productContent.replace('%brand%', products[product].brand);
@@ -131,7 +134,7 @@ var generateProducts = function(sortByProp){
   }
 };
 
-// call function 
+// call function to generate the HTML for products
 generateProducts();
 
 
