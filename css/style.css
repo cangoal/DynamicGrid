@@ -47,3 +47,23 @@ span.sale-price{
 	color: red; 
 	margin-left: 20px;
 }
+
+
+/*responsive design*/
+/*@media screen and (min-width: 1024px){
+	li.product{
+		width: 20%;
+	}
+}
+
+@media screen and (max-width: 768px){
+	li.product{
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 500px){
+	li.product{
+		width: 100%;
+	}
+}*/
