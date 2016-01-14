@@ -129,7 +129,7 @@ var generateProducts = function(sortByProp){
     if(products[product].sale_price){
         productContent += HTMLproductSalePrice.replace('%salePrice%', products[product].sale_price);
     }
-    productContent += '</span>'
+    productContent += '</span>';
     document.getElementById('products').lastChild.innerHTML = productContent;
   }
 };
@@ -151,7 +151,7 @@ gridSelector.addEventListener("change", function(){
 function changeGrid(col){
   var products = document.getElementsByClassName('product');
   var width = (1 / col) * 100 + '%';
-  console.log(width);
+  // console.log(width);
   for(var i=0; i<products.length; i++) {
     products[i].style.width = width;
   }
@@ -165,6 +165,3 @@ sortSelector.addEventListener("change", function(){
     generateProducts(sortSelector.value);
     changeGrid(gridSelector.value);
 });
-
-
-
